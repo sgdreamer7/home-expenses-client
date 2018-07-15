@@ -9,7 +9,7 @@ import SigninPage from "views/Signin/SigninPage.jsx";
 import VerifyEmailPage from "views/VerifyEmail/VerifyEmailPage.jsx";
 import SignupPage from "views/Signup/SignupPage.jsx";
 import ReportsPage from "views/Reports/ReportsPage.jsx";
-import UserProfile from "views/UserProfile/UserProfile.jsx";
+import ConfigPage from "views/Config/ConfigPage.jsx";
 
 export const isSignedInUser = true;
 
@@ -59,7 +59,7 @@ const dashboardRoutes = [
     sidebarName: "Config",
     navbarName: "Config",
     icon: Settings,
-    component: UserProfile // TODO: replace by admin page component
+    component: ConfigPage
   },
   {
     redirect: true,
