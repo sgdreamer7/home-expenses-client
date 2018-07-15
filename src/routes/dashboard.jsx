@@ -8,10 +8,10 @@ import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import SigninPage from "views/Signin/SigninPage.jsx";
 import VerifyEmailPage from "views/VerifyEmail/VerifyEmailPage.jsx";
 import SignupPage from "views/Signup/SignupPage.jsx";
-import UserProfile from "views/UserProfile/UserProfile.jsx";
-import TableList from "views/TableList/TableList.jsx";
+import ReportsPage from "views/Reports/ReportsPage.jsx";
+import ConfigPage from "views/Config/ConfigPage.jsx";
 
-export const isSignedInUser = false;
+export const isSignedInUser = true;
 
 const dashboardRoutes = [
   (isSignedInUser && {
@@ -50,8 +50,8 @@ const dashboardRoutes = [
     path: "/reports",
     sidebarName: "Reports",
     navbarName: "Reports",
-    icon: Receipt, // TODO: replace icon
-    component: TableList // TODO: replace by statistics page component
+    icon: Receipt,
+    component: ReportsPage
   }) ||
     null,
   isSignedInUser && {
@@ -59,7 +59,7 @@ const dashboardRoutes = [
     sidebarName: "Config",
     navbarName: "Config",
     icon: Settings,
-    component: UserProfile // TODO: replace by admin page component
+    component: ConfigPage
   },
   {
     redirect: true,
