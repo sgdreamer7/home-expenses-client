@@ -14,16 +14,6 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Table from "components/Table/Table.jsx";
 
-import customInputStyle from "assets/jss/material-dashboard-react/components/customInputStyle";
-
-import { bugs, website, server } from "variables/general";
-
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from "variables/charts";
-
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
 
 const styles = theme => ({
