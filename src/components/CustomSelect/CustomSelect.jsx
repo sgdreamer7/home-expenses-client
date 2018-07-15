@@ -5,14 +5,14 @@ import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
-import Input from "@material-ui/core/Input";
+import Select from "@material-ui/core/Select";
 // @material-ui/icons
 import Clear from "@material-ui/icons/Clear";
 import Check from "@material-ui/icons/Check";
 // core components
 import customInputStyle from "assets/jss/material-dashboard-react/components/customInputStyle";
 
-function CustomInput({ ...props }) {
+function CustomSelect({ ...props }) {
   const {
     classes,
     formControlProps = {},
@@ -21,7 +21,8 @@ function CustomInput({ ...props }) {
     labelProps,
     inputProps,
     error,
-    success
+    success,
+    children
   } = props;
 
   const labelClasses = classNames({
@@ -50,7 +51,8 @@ function CustomInput({ ...props }) {
           {labelText}
         </InputLabel>
       ) : null}
-      <Input
+      <Select
+        native
         classes={{
           root: marginTop,
           disabled: classes.disabled,
@@ -58,7 +60,9 @@ function CustomInput({ ...props }) {
         }}
         id={id}
         {...inputProps}
-      />
+      >
+        {children}
+      </Select>
       {error ? (
         <Clear className={classes.feedback + " " + classes.labelRootError} />
       ) : success ? (
@@ -68,7 +72,7 @@ function CustomInput({ ...props }) {
   );
 }
 
-CustomInput.propTypes = {
+CustomSelect.propTypes = {
   classes: PropTypes.object.isRequired,
   labelText: PropTypes.node,
   labelProps: PropTypes.object,
@@ -79,4 +83,4 @@ CustomInput.propTypes = {
   success: PropTypes.bool
 };
 
-export default withStyles(customInputStyle)(CustomInput);
+export default withStyles(customInputStyle)(CustomSelect);
