@@ -136,7 +136,7 @@ class Dashboard extends React.Component {
                   tableData={Array.from(Array(20).keys()).map(index => [
                     new Date().toDateString(),
                     `Category ${index + 1}`,
-                    index % 2 === 0 ? `Expneses ${index + 1}` : "",
+                    index % 2 === 0 ? `Expenses ${index + 1}` : "",
                     ((index + 1) * 12.34).toFixed(2)
                   ])}
                 />

@@ -64,6 +64,7 @@ function UserProfile(props) {
                       <Button color="warning">
                         <Cancel />
                       </Button>
+                      <Button color="info">*</Button>
                     </div>
                   ])}
                 />
